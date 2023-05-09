@@ -1,2 +1,6 @@
 # t.web.labs
-UTM.FCIM.CR-203.Technologii.Web.Labs
+Universitatea Tehnica al Moldovei
+Facultatea Calculatoare, Informatica si Microelectronica
+Calculatoare si Retele [CR-203]
+Curs III. Semestrul VI
+Fiodorov Vladimir
