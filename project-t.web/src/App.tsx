@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Menu from './Menu.tsx'
-import Card from './Card.tsx'
-import FormBlock from './FormBlock.tsx'
+import Menu from './Menu'
+import Card from './Card'
+import FormBlock from './FormBlock'
 
 function App() {
   return (

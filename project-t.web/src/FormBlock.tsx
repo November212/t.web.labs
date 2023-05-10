@@ -1,10 +1,11 @@
 import { Form, Input, Button } from 'antd';
 
 function FormBlock() {
-    const onFinish = (values) => {
+    const onFinish = (values: { [name: string]: any }) => {
         console.log(values);
         alert('Form submitted!');
     };
+
 
     return (
         <Form onFinish={onFinish}>
