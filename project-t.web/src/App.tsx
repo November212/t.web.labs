@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Menu from './Menu';
+import MenuBlock from './Menu';
 import Card from './Card';
 import FormBlock from './FormBlock';
 import LoginForm from './LoginForm';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   useEffect(() => {
@@ -17,26 +18,24 @@ function App() {
   }, []);
 
   return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <Menu />
-          <Card />
-          <FormBlock />
-          <LoginForm />
-        </header>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <p>
+              Edit <code>src/App.tsx</code> and save to reload.
+            </p>
+            <MenuBlock />
+            <div>
+              <Routes>
+              <Route path="/" element={<LoginForm />} />
+              <Route path="/card" element={<Card />} />
+              <Route path="/form" element={<FormBlock />} />
+              </Routes>
+            </div>
+          </header>
+        </div>
+      </BrowserRouter>
   );
 }
 
