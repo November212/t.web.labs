@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Menu from './Menu';
 import Card from './Card';
 import FormBlock from './FormBlock';
+import LoginForm from './LoginForm';
 
 function App() {
+  useEffect(() => {
+    const users = [
+      { username: 'user1', password: 'pass1' },
+      { username: 'user2', password: 'pass2' },
+      { username: 'user3', password: 'pass3' },
+    ];
+    localStorage.setItem('users', JSON.stringify(users));
+  }, []);
+
   return (
       <div className="App">
         <header className="App-header">
@@ -24,6 +34,7 @@ function App() {
           <Menu />
           <Card />
           <FormBlock />
+          <LoginForm />
         </header>
       </div>
   );
