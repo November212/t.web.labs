@@ -16,3 +16,5 @@ const person: Person = {
     email: 'john.doe@example.com',
     phone: '+1 123-456-7890',
 };
+
+export {};
