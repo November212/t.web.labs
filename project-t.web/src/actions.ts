@@ -1,9 +1,9 @@
 import { action } from 'mobx';
 
 export const increment = action(() => {
-    store.counter++;
+    localStorage.counter++;
 });
 
 export const decrement = action(() => {
-    store.counter--;
+    localStorage.counter--;
 });
